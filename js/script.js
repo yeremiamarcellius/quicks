@@ -207,6 +207,7 @@ function closing(){
       headerChat.style.display="none";
       headerLineChat.style.display="none";
       chatText.style.display="none";
+      taskbox.style.display="none"
     //   option.style.display="none";
       inputgroup.style.display="none";
       chatOptionGroup.forEach(function (i) {
@@ -316,6 +317,38 @@ customSelects.forEach(function (select) {
     window.addEventListener('click', function (e) {
         if (!select.contains(e.target)) {
             selectItems.style.display = 'none';
+        }
+    });
+});
+
+const acc = document.querySelectorAll(".accordion");
+const panel = document.querySelectorAll(".panel");
+console.log(panel);
+
+for (let i = 0; i < acc.length; i++) { 
+    console.log(panel[i]);
+    acc[i].addEventListener("click", function() {
+        console.log(panel[i]);
+        if (panel[i].style.display === "block") {
+            panel[i].style.display = "none";
+        } else {
+            panel[i].style.display = "block";
+        }
+        this.classList.toggle("rotated");
+    });
+}
+
+const checkboxes = document.querySelectorAll('.case-checkbox');
+
+checkboxes.forEach((checkbox, index) => {
+    checkbox.addEventListener('change', function() {
+        const caseText = this.previousElementSibling;
+        if (this.checked) {
+            caseText.innerHTML = `<s>${caseText.textContent}</s>`;
+            caseText.classList.add('checked-text');
+        } else {
+            caseText.innerHTML = caseText.textContent;
+            caseText.classList.remove('checked-text');
         }
     });
 });

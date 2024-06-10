@@ -80,7 +80,7 @@
 
 .search-bar{
     width: 85vw;
-    height: 9vh;
+    height: 6vh;
     background-color: #4F4F4F;
 }
 
@@ -96,7 +96,7 @@
 
 .main{
     width: 85vw;
-    height: 91vh;
+    height: 94vh;
     background-color: #333333;
     display: flex;
 }
@@ -309,7 +309,7 @@ input[class$="search-chat"] {
 .container {
     display: block;
     position: relative;
-    padding-left: 75px;
+    padding-left: 55px;
     margin-bottom: 10px;
     cursor: pointer;
     /* font-size: 22px; */
@@ -583,24 +583,6 @@ input[class$="search-chat"] {
     cursor: pointer;
 }
 
-#task-select{
-    width: 120px;
-    height: 40px;
-    padding: 10px 14px 10px 14px;
-    border: 1px solid #828282;
-    border-radius: 5px;
-    margin-left: 100px;
-}
-
-#task-select option{
-    width: 288px;
-    height: 80px;
-    background-color: white;
-    border: 1px solid #828282;
-    border-radius: 5px;
-}
-
-
 .custom-select {
     position: relative;
     display: inline-block;
@@ -618,6 +600,48 @@ input[class$="search-chat"] {
     align-items: center;
 }
  
+.task-scroll{
+    min-height:430px !important;
+    max-height:430px !important;
+    overflow-y:scroll !important;
+}
+
+.list-task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checked-text {
+    color: #828282;
+}
+
+.panel{
+    display: none;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 0 18px;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion{
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
+.accordion.rotated {
+    transform: rotate(360deg);
+}
+
+.detail{
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+hr{
+    margin-bottom: 20px;
+}
+
 /* Style the dropdown items */
 .select-items {
     margin-top: 10px;
