@@ -532,6 +532,10 @@ input[class$="search-chat"] {
     /* position: fixed; */
 }
 
+#back, #exit{
+    cursor: pointer;
+}
+
 .new-notif{
     display: flex;
     align-items: center;
@@ -544,6 +548,7 @@ input[class$="search-chat"] {
     padding: 8px 12px 8px 12px;
     position: fixed;
     margin-top: -65px;
+    cursor: pointer;
     z-index: 5;
 }
 
